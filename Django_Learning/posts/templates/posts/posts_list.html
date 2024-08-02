@@ -5,6 +5,15 @@
 {% endblock %}
 
 {% block content %}
+    <section>
     <h1>Post Lists</h1>
-    
+
+    {% for post in posts %}
+        <artical calss="post">
+            <h2>{{ post.title }}</h2>
+            <p>{{ post.date }}</p>
+            <p>{{ post.body }}</p>
+        </artical>
+    {% endfor %}
+    </section>
 {%  endblock %}
