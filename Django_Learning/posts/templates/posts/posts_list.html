@@ -6,11 +6,15 @@
 
 {% block content %}
     <section>
-    <h1>Post Lists</h1>
+    <h1>Posts</h1>
 
     {% for post in posts %}
         <artical calss="post">
-            <h2>{{ post.title }}</h2>
+            <h2>
+                <a href="{% url 'post:page' slug=post.slug %}">
+                {{ post.title }}
+                </a>
+            </h2>
             <p>{{ post.date }}</p>
             <p>{{ post.body }}</p>
         </artical>
