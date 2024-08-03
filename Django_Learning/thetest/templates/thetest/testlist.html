@@ -1,0 +1,24 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    Tests List
+{% endblock %}
+
+{% block content %}
+    <section>
+    <h1>Tests</h1>
+
+    {% for test in thetests %}
+        <artical calss="post">
+            <h2>
+                <a href="{% url 'thetest:thetest' slug=test.slug %}">
+                {{ test.name }}
+                </a>
+            </h2>
+            <p>{{ test.date }}</p>
+            <p>{{ test.id }}</p>
+            <p>{{ test.email }}</p>
+        </artical>
+    {% endfor %}
+    </section>
+{%  endblock %}

@@ -1,0 +1,13 @@
+{% extends 'layout.html' %}
+
+{% block title %}
+    {{test.name}}
+{% endblock %}
+
+{% block content %}
+    <section>
+        <h1> {{ test.email }}</h1>
+        <p>{{ test.date }}</p>
+        <p>{{ test.id }}</p>
+    </section>
+{%  endblock %}

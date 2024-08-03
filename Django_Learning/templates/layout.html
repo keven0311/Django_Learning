@@ -20,7 +20,12 @@
         <a href="/about">
             <span role='img' aria-label="About">😎</span>
         </a> |
-        <a href="{% url 'post:list' %}">📰</a> 
+        <a href="{% url 'post:list' %}">
+            <span role='img' aria-label="About">📰</span>
+        </a> |
+        <a href="{% url 'thetest:test_list' %}">
+            <span role='img' aria-label="Thetest">🧪</span>
+        </a>
     </nav>
     <main>
         {% block content %}

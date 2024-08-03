@@ -23,5 +23,6 @@ urlpatterns = [
     path('', views.homepage),
     path('home/', views.homepage),
     path('about/', views.about),
-    path('posts/', include('posts.urls'))
+    path('posts/', include('posts.urls')),
+    path('test/', include('thetest.urls'))
 ]

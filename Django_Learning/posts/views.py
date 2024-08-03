@@ -13,3 +13,4 @@ def post_page(request, slug):
     return render(request, 'posts/post_page.html', {
         'post':post
     })
+    
