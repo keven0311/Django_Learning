@@ -15,19 +15,22 @@
 <body>
     <nav>
         <a href="/">
-            <span role='img' aria-label="Home">🏠</span>
+            <span role='img' aria-label="Home" title="Home">🏠</span>
         </a> |
         <a href="/about">
-            <span role='img' aria-label="About">😎</span>
+            <span role='img' aria-label="About" title="About">😎</span>
         </a> |
         <a href="{% url 'post:list' %}">
-            <span role='img' aria-label="About">📰</span>
+            <span role='img' aria-label="Posts List" title="Posts List">📰</span>
         </a> |
         <a href="{% url 'thetest:test_list' %}">
-            <span role='img' aria-label="Thetest">🧪</span>
+            <span role='img' aria-label="Thetest" title="Dev Test">🧪</span>
         </a> |
         <a href="{% url 'users:users_list' %}">
-            <span role='img' aria-label="Users">👥</span>
+            <span role='img' aria-label="Users" title="Users List">👥</span>
+        </a> |
+        <a href="{% url 'users:sign_up' %}">
+            <span role='img' aria-label="Users Sign Up" title="Sign Up">🚀</span>
         </a>
     </nav>
     <main>

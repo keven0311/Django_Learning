@@ -50,3 +50,19 @@ a:hover {
     width: 100%;
     max-width: 800px;
 }
+
+.sign_up_form{
+    font-size: 1rem;
+    display: flex;
+    flex-direction: column;
+    height: 50vh;
+    justify-content: space-evenly;
+}
+
+.sign_up_button{
+    border-radius: 10%;
+    width: 20%;
+    height: 1.5rem;
+    background-color: #44B78B;
+    color: whitesmoke;
+}
