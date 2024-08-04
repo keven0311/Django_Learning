@@ -1,0 +1,16 @@
+{% extends "layout.html" %}
+
+{% block title%}
+    {{single_user.name}}
+{% endblock %}
+
+{% block content %}
+    <section>
+        <img src="{{single_user.avatar.url}}" alt="{{single_user.name}}">
+        <h1>{{single_user.name}}</h1>
+        <p>{{single_user.email}}</p>        
+        <p>{{single_user.about}}</p>        
+        <p>Member since: {{single_user.date}}</p>        
+        <p>user id: {{single_user.id}}</p>        
+    </section>
+{% endblock %}
