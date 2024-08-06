@@ -33,9 +33,7 @@
             <span role='img' aria-label="Users Sign Up" title="Sign Up">🚀</span>
         </a>
         </a> |
-        <a href="{% url 'users:login' %}">
-            <span role='img' aria-label="Users Login" title="Login">🎈</span>
-        </a> |
+        {% if user.is_authenticated %}
         <a href="{% url 'post:new-post' %}">
             <span role='img' aria-label="New Post" title="New Post">🆕</span>
         </a> |
@@ -43,6 +41,11 @@
             {% csrf_token %}
             <button class="logout-button" aria-label="USer Logout" title="Logout">👋</button>
         </form>
+        {% else %}
+        <a href="{% url 'users:login' %}">
+            <span role='img' aria-label="Users Login" title="Login">🎈</span>
+        </a> |
+        {% endif %}
     </nav>
     <main>
         {% block content %}
