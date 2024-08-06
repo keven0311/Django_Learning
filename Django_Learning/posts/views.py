@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from .models import Post
 from django.contrib.auth.decorators import login_required
+from . import forms
 
 
 # Create your views here.
@@ -17,5 +18,14 @@ def post_page(request, slug):
     
 @login_required(login_url="/users/login/")
 def post_new(request):
-    return render(request, 'posts/post_new.html')
+    if request.method == "POST":
+        form = forms.CreatePost(request.POST, request.FILES)
+        if form.is_valid():
+            print("form submiited")
+            return redirect('post:list')
+    else:
+        form = forms.CreatePost()
+    return render(request, 'posts/post_new.html', { 'form': form})
+
+
     

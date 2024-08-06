@@ -1,5 +1,6 @@
 from django.db import models
 import uuid
+from django.contrib.auth.models import User
 
 # Create your models here.
 class Users(models.Model):
@@ -9,6 +10,7 @@ class Users(models.Model):
     about = models.TextField(max_length=200)
     date = models.DateField(auto_now_add=True)
     avatar = models.ImageField(default='pythonlogo.png',blank=True)
+    
     
     def __str__(self):
         return self.name
