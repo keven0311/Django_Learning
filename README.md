@@ -20,3 +20,5 @@ in WSL:
     Superuser:
         [terminal command]: python3 manage.py createsuperuser
         *the superuser is use to enter the /admin endpoint to the Django Administtration page*
+
+    

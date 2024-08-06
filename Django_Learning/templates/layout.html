@@ -26,9 +26,9 @@
         <a href="{% url 'thetest:test_list' %}">
             <span role='img' aria-label="Thetest" title="Dev Test">🧪</span>
         </a> |
-        <a href="{% url 'users:users_list' %}">
+        {% comment %} <a href="{% url 'users:users_list' %}">
             <span role='img' aria-label="Users" title="Users List">👥</span>
-        </a> |
+        </a> | {% endcomment %}
         <a href="{% url 'users:sign_up' %}">
             <span role='img' aria-label="Users Sign Up" title="Sign Up">🚀</span>
         </a>
